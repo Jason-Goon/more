@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
+console.log('Script is running');
   document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
