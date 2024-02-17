@@ -10,12 +10,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-console.log('Script is running');
-  document.addEventListener('DOMContentLoaded', function() {
+ console.log('Script is running');
+  window.onload = function() {
     const menuButton = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    menuButton.addEventListener('click', function() {
-      menu.classList.toggle('hidden');
-    });
-  });
+    console.log('Menu button:', menuButton); // Should log the button element
+    if (menuButton) {
+      menuButton.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+        console.log('Button clicked');
+      });
+    } else {
+      console.log('Menu button not found');
+    }
+  };
