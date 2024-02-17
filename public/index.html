@@ -181,9 +181,10 @@
     
 
     <script src="../src/scripts/main.js"></script>
-    <script>
+   <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.querySelector('header nav .block md:hidden button');
+    // Adding an ID to the button for example purposes: id="menu-toggle"
+    const menuButton = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
 
     menuButton.addEventListener('click', function () {
@@ -191,5 +192,6 @@
     });
   });
 </script>
+
 </body>
 </html>
