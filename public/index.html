@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Project Name</title>
+    <link href="./assets/styles/tailwind.css" rel="stylesheet">
+    <style>
+        .feature-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            overflow: visible; /* Ensure shadows aren't clipped */
+        }
+    
+        /* Box with increased opacity and visible outline */
+        .feature-link::before, .feature-link::after {
+            content: '';
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7); /* Increased opacity for visibility */
+            width: calc(100% + 4px); /* Extend size for shadow visibility */
+            height: calc(100% + 4px);
+            margin-left: -2px; /* Adjust position to center */
+            margin-top: -2px;
+            box-shadow: 0 0 0 2px black; /* Simulate border around the box */
+        }
+    
+        .feature-link::before {
+            transform: translate(5px, 5px);
+        }
+    
+        .feature-link::after {
+            transform: translate(-5px, -5px);
+        }
+    
+        .feature-link span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Ensure background image covers but is always fully visible */
+.hero-container {
+    background-size: contain; /* Change from cover to contain for full visibility */
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+/* Ensure background image covers but is always fully visible */
+
+
+
+
+    </style>
+    
+    
+    
+</head>
+<body class="flex flex-col">
+    <div class="relative w-full">
+        <header class="absolute top-0 left-0 right-0 w-full bg-transparent backdrop-blur-lg z-20">
+            <nav class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="text-xl font-semibold text-black">esImErKki</a>
+                    <div class="block md:hidden">
+                        <button class="text-black focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                            <li>
+                                <a href="#" class="py-3 px-5 text-black hover:text-gray-800 text-lg font-semibold" aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#features" class="py-3 px-5 text-black hover:text-gray-800 text-lg font-semibold">Ominaisuudet</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="py-3 px-5 text-black hover:text-gray-800 text-lg font-semibold">Tietoa meistä</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        
+        <div class="hero-container h-screen w-full bg-no-repeat bg-cover" style="background-image: url('./assets/images/image5.png');"></div>
+            <a href="#features" class="feature-link">
+                <span>Tutustu Ominaisuuksiin</span>
+            </a>
+        </div>
+        
+
+
+
+    
+<main class="px-6 py-20">
+    <div class="container mx-auto">
+       
+                <!-- Illustration here -->
+               
+
+            </div>
+       
+
+        <section id="features" class="container mx-auto px-6 p-10">
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="w-full md:w-1/2 rounded-lg bg-white p-5 shadow-sm">
+                    <h4 class="text-3xl text-gray-800 font-bold mb-3">Korvaa oikeilla kuvilla!</h4>
+                    <p class="text-gray-600 mb-8">
+                        Tailwind css testi / harjoittelu
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="./assets/images/image2.png" alt="Explore the World" class="w-full rounded-lg">
+                </div>
+            </div>
+            <!-- Repeat for other features -->
+        </section>
+        
+        <!-- This is an extension from the previous feature section -->
+        <section id="about" class="bg-white py-12">
+            <div class="container mx-auto px-6 flex flex-wrap pt-8 pb-12">
+                <!-- Text container -->
+                <div class="w-full md:w-1/2 pl-10">
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-5">
+                        Tietoa
+                    </h3>
+                    <p class="text-gray-600 mb-8">
+                       tein sivun tyylit tailwindilla ja generoin kuvat tEkoAlyLla viisi kuusi kahdeksan kymmenen yksitoista kaksitoista kolmetoista
+                    </p>
+                </div>
+        
+                <!-- Image container -->
+                <div class="w-full md:w-1/2 flex justify-center items-center">
+                    <img src="./assets/images/image3.png" alt="Description of Image" class="max-w-full h-auto rounded-lg shadow-lg"> <!-- Adjust the src attribute -->
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
+    
+
+        
+       
+    </main>
+    
+
+    <footer class="bg-white">
+        <div class="container mx-auto px-6 pt-10 pb-6">
+            <div class="flex justify-center"> <!-- Center the form container -->
+                <div class="w-full max-w-md"> <!-- Restrict form width and centralize -->
+                    <div class="mb-6">
+                        <h2 class="text-center text-gray-700 text-sm font-bold mb-2">Contact Us</h2>
+                        <form action="#" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                            <input type="text" name="name" placeholder="Your Name" class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline">
+                            <input type="email" name="email" placeholder="Your Email" class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline">
+                            <textarea name="message" placeholder="Your Message" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                            <button type="submit" style="background-color: #113946;" class="w-full text-gray-800 font-bold py-3 px-6 rounded-lg mt-3 hover:bg-blue-700 transition ease-in-out duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    
+
+    <script src="../src/scripts/main.js"></script>
+</body>
+</html>
